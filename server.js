@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { connectDB } from "./db.js";
+import { connectDB } from "./config/db.js";
 import userRouter from "./routes/user.rout.js";
 import helmet from "helmet";
 
