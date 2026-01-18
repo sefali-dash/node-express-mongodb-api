@@ -1,8 +1,8 @@
 import express from "express";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import { User } from "./user.model.js";
-import { auth } from "./auth.js";
+import { User } from "../user.model.js";
+import { auth } from "../auth.js";
 
 const router = express.Router();
 
@@ -22,7 +22,7 @@ router.get("/:UserId", auth, async (req, res, next) => {
 
   const user = await User.findOne(
     { id: requestUserId },
-    { password: false, _v: false }
+    { password: false, _v: false },
   );
 
   res.json(user);

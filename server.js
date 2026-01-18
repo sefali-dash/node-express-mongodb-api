@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import { connectDB } from "./db.js";
-import userRouter from "./user.rout.js";
+import userRouter from "./routes/user.rout.js";
 import helmet from "helmet";
 
 const app = express();
